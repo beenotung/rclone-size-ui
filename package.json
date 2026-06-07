@@ -2,10 +2,10 @@
   "name": "rclone-size-ui",
   "version": "0.0.0",
   "type": "commonjs",
-  "description": "",
+  "description": "A simple web app to explore the size of files and directories in a rclone remote.",
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
+  "license": "BSD-2-Clause",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -31,5 +31,13 @@
     "onlyBuiltDependencies": [
       "esbuild"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beenotung/rclone-size-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/beenotung/rclone-size-ui/issues"
+  },
+  "homepage": "https://github.com/beenotung/rclone-size-ui#readme"
 }
