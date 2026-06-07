@@ -27,14 +27,56 @@
         padding: 0.5rem;
         border-radius: 0.5rem;
         background-color: snow;
+        overflow: auto;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+      }
+      .input-field {
+        margin: 0.25rem 0;
       }
     </style>
   </head>
   <body>
     <div id="app">
-      <h1>Demo</h1>
+      <h1>Rclone Size Explorer</h1>
       <p id="status">Loading...</p>
-      <div id="container">TODO</div>
+      <div class="input-field">
+        <label for="modeInput">Mode</label>
+        <select id="modeInput">
+          <option value="file">File</option>
+          <option value="directory">Directory</option>
+          <option value="both">Both</option>
+        </select>
+      </div>
+      <div class="input-field">
+        <label for="recursiveInput">Recursive directory size</label>
+        <input type="checkbox" id="recursiveInput" />
+      </div>
+      <input type="file" id="fileInput" />
+      <div id="container">
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Size</th>
+              <th style="text-align: start">Name</th>
+            </tr>
+          </thead>
+          <tbody id="fileList">
+            <tr class="file-item">
+              <td class="file-type">[F]</td>
+              <td class="file-size">100B</td>
+              <td class="file-name">file.txt</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <script src="dist/bundle.js"></script>
   </body>
